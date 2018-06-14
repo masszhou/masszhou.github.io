@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="machine learning," />
 
 
 
@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="Thinking and Archives about Fundamental Mathematic, Machine Learning and Autonomous Driving">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhiliang&#39;s Blog and Notes">
-<meta property="og:url" content="http://masszhou.github.io/tags/optimization/index.html">
+<meta name="description" content="Sliding window or attention mechanism ?  Idea of YOLO DetectorClassic object detection task normally has two steps, which are classify the content of region of interests (ROI) by e.g. CNN, and locate">
+<meta name="keywords" content="machine learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Anatomy of YOLO Detector">
+<meta property="og:url" content="http://masszhou.github.io/2018/05/30/yolo-objects-detection/index.html">
 <meta property="og:site_name" content="Zhiliang&#39;s Blog and Notes">
-<meta property="og:description" content="Thinking and Archives about Fundamental Mathematic, Machine Learning and Autonomous Driving">
+<meta property="og:description" content="Sliding window or attention mechanism ?  Idea of YOLO DetectorClassic object detection task normally has two steps, which are classify the content of region of interests (ROI) by e.g. CNN, and locate">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://masszhou.github.io/content/images/2018/05/yolov3.png">
+<meta property="og:updated_time" content="2018-06-14T12:26:15.786Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhiliang&#39;s Blog and Notes">
-<meta name="twitter:description" content="Thinking and Archives about Fundamental Mathematic, Machine Learning and Autonomous Driving">
+<meta name="twitter:title" content="Anatomy of YOLO Detector">
+<meta name="twitter:description" content="Sliding window or attention mechanism ?  Idea of YOLO DetectorClassic object detection task normally has two steps, which are classify the content of region of interests (ROI) by e.g. CNN, and locate">
+<meta name="twitter:image" content="http://masszhou.github.io/content/images/2018/05/yolov3.png">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://masszhou.github.io/tags/optimization/"/>
+  <link rel="canonical" href="http://masszhou.github.io/2018/05/30/yolo-objects-detection/"/>
 
 
 
 
 
-  <title>Tag: optimization | Zhiliang's Blog and Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Anatomy of YOLO Detector | Zhiliang's Blog and Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -143,7 +147,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,54 +251,170 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>optimization<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://masszhou.github.io/2018/05/30/yolo-objects-detection/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhiliang Zhou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhiliang's Blog and Notes">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2016/09/10/Lagrange-Duality/" itemprop="url">
-              
-                <span itemprop="name">Intuition behind Lagrange Duality</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Anatomy of YOLO Detector</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-10T02:27:23+02:00"
-              content="2016-09-10" >
-          09-10
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-30T21:24:32+02:00">
+                2018-05-30
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/30/yolo-objects-detection/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/30/yolo-objects-detection/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>Sliding window or attention mechanism ?</p>
+</blockquote>
+<h1 id="Idea-of-YOLO-Detector"><a href="#Idea-of-YOLO-Detector" class="headerlink" title="Idea of YOLO Detector"></a>Idea of YOLO Detector</h1><p>Classic object detection task normally has two steps, which are classify the content of region of interests (ROI) by e.g. CNN, and locate the ROI by e.g. “scanning with sliding window”.<br>Yolo uses a reasonable strong spatial constrains to merge these two steps into one step, and process the original image only once (input image to NN once), which literally means “You Only Look Once” (YOLO).<br>For the short explanation, Yolo divides the image into $S \times S$ grids, and suppose each cell of the grid take responsibility for the detection of objectness and classification of objects.</p>
+<a id="more"></a>
+<p>And the most amazing fact is, under this architecture with end-to-end training, the detection problem is converted as a regression problem.<br>For example, each attention cell is capable to locate and identify an arbitrary size object directly from the whole image, if the center point of object is in the corresponding cell.<br>By using this attention grid architecture, the inference process can be very efficient, because “You Only Look Once”.</p>
+<p>The biggest advantage of Yolo is, that Yolo is really fast for inference.<br>In my experiment, Yolo3-tiny can work at 30 FPS on a normal Laptop (GeForce 930MX), which is critical for integration on a real car, due to limited computational resources.<br>One obviously shortage of Yolo is, due to the limited resolution of attention grid, Yolo is not good at detecting swarm objects, such as detecting bird swarm or counting crowded people. But for detection on the street, Yolo is the best option, which compromised with detection speed and detection performance in my recherche. </p>
+<h1 id="Yolo-V3"><a href="#Yolo-V3" class="headerlink" title="Yolo V3"></a>Yolo V3</h1><p>In this project, firstly Yolo v3 was implemented (forked from <a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">Github Repo</a>) and tested.</p>
+<p>The implemented network has architecture as following Fig.3.</p>
+<p><img src="/content/images/2018/05/yolov3.png" width="600"></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/13/fully-convelutional-neural-network/" rel="next" title="fully-convelutional-neural-network">
+                <i class="fa fa-chevron-left"></i> fully-convelutional-neural-network
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/14/Johnson-Lindenstrauss-Lemma/" rel="prev" title="Johnson-Lindenstrauss-Lemma">
+                Johnson-Lindenstrauss-Lemma <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -302,6 +422,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -322,8 +456,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -338,7 +481,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -351,7 +494,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -374,6 +517,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Idea-of-YOLO-Detector"><span class="nav-number">1.</span> <span class="nav-text">Idea of YOLO Detector</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Yolo-V3"><span class="nav-number">2.</span> <span class="nav-text">Yolo V3</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -507,6 +666,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -524,6 +687,18 @@
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://masszhou.github.io/2018/05/30/yolo-objects-detection/';
+          this.page.identifier = '2018/05/30/yolo-objects-detection/';
+          this.page.title = 'Anatomy of YOLO Detector';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
